@@ -1,95 +1,220 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Posters Prformance</title>
-  <style>
-    body {margin:0;font-family:Arial, sans-serif;background:#0f0f0f;color:#fff;}
-    header {background:#111;padding:20px;text-align:center;}
-    header h1 {margin:0;color:#ff3c00;letter-spacing:2px;}
-    nav {margin-top:10px;}
-    nav a {color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;}
-    .hero {padding:60px 20px;text-align:center;background:linear-gradient(135deg,#ff3c00,#000);} 
-    .hero h2 {font-size:36px;margin-bottom:10px;}
-    .hero p {font-size:18px;}
-    .section {padding:40px 20px;text-align:center;}
-    .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;padding:20px;}
-    .poster {background:#1a1a1a;padding:10px;border-radius:10px;}
-    .poster img {width:100%;border-radius:10px;}
-    .poster h3 {margin:10px 0 5px;}
-    .poster p {font-size:14px;}
-    .order-btn {display:inline-block;margin-top:10px;padding:10px 15px;background:#ff3c00;color:#fff;text-decoration:none;border-radius:5px;font-weight:bold;}
-    footer {background:#111;padding:20px;text-align:center;}
-    .social a {margin:0 10px;color:#ff3c00;text-decoration:none;font-weight:bold;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posters Performance</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:black;
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #ff3c00;
+}
+
+header h1{
+    color:#ff3c00;
+    font-size:32px;
+}
+
+/* HERO */
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(120deg,#ff3c00,#300000);
+}
+
+.hero h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* POSTERS */
+.section{
+    padding:60px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#ff3c00;
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.posters-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.poster-card{
+    background:#111;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,60,0,0.15);
+    transition:0.3s;
+}
+
+.poster-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 35px rgba(255,60,0,0.35);
+}
+
+.poster-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.poster-card h3{
+    margin-bottom:12px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff3c00;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff5a2a;
+}
+
+/* ORDER */
+#order{
+    background:#0f0f0f;
+    padding:60px 20px;
+}
+
+form{
+    max-width:400px;
+    margin:auto;
+    background:#111;
+    padding:25px;
+    border-radius:12px;
+}
+
+form h3{
+    text-align:center;
+    color:#ff3c00;
+    margin-bottom:20px;
+}
+
+form input, form button{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:6px;
+    border:none;
+}
+
+form button{
+    background:#ff3c00;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+form button:hover{
+    background:#ff5a2a;
+}
+
+/* FOOTER */
+footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    font-size:14px;
+    opacity:0.7;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Posters Prformance</h1>
-  <nav>
-    <a href="#home">Начало</a>
-    <a href="#posters">Постери</a>
-    <a href="#about">За нас</a>
-    <a href="#contact">Контакти</a>
-  </nav>
+    <h1>Posters Performance</h1>
 </header>
 
-<section class="hero" id="home">
-  <h2>Премиум постери за истински фенове</h2>
-  <p>Стил. Скорост. Мощ. Дизайн.</p>
+<section class="hero">
+    <h2>Performance Posters</h2>
+    <p>Премиум постери за коли • Тунинг • Performance култура</p>
 </section>
 
 <section class="section" id="posters">
-  <h2>Нашите постери</h2>
-  <div class="gallery">
+    <h2>Нашите постери</h2>
 
-    <div class="poster">
-      <img src="https://via.placeholder.com/300x400" alt="Poster 1">
-      <h3>Poster 1</h3>
-      <p>Описание на постера</p>
-      <a class="order-btn" href="#contact">Поръчай</a>
+    <div class="posters-grid">
+
+        <div class="poster-card">
+            <img src="images/poster1.png" alt="Poster 1">
+            <h3>BMW M1000RR</h3>
+            <a href="#order" class="btn">Поръчай</a>
+        </div>
+
+        <div class="poster-card">
+            <img src="images/poster2.png" alt="Poster 2">
+            <h3>Dimitrov BMW</h3>
+            <a href="#order" class="btn">Поръчай</a>
+        </div>
+
+        <div class="poster-card">
+            <img src="images/poster3.png" alt="Poster 3">
+            <h3>RS7 Performance</h3>
+            <a href="#order" class="btn">Поръчай</a>
+        </div>
+
     </div>
-
-    <div class="poster">
-      <img src="https://via.placeholder.com/300x400" alt="Poster 2">
-      <h3>Poster 2</h3>
-      <p>Описание на постера</p>
-      <a class="order-btn" href="#contact">Поръчай</a>
-    </div>
-
-    <div class="poster">
-      <img src="https://via.placeholder.com/300x400" alt="Poster 3">
-      <h3>Poster 3</h3>
-      <p>Описание на постера</p>
-      <a class="order-btn" href="#contact">Поръчай</a>
-    </div>
-
-  </div>
 </section>
 
-<section class="section" id="about">
-  <h2>За Posters Prformance</h2>
-  <p>Posters Prformance е бранд за стилни, модерни и висококачествени постери за фенове на дизайна, скоростта и изкуството.</p>
-</section>
+<section id="order">
+    <form action="https://formsubmit.co/georgi_kaykov@abv.bg" method="POST">
+        <input type="hidden" name="_subject" value="Нова поръчка от сайта">
+        <input type="hidden" name="_captcha" value="false">
 
-<section class="section" id="contact">
-  <h2>Контакти и поръчки</h2>
-  <p>Поръчки чрез съобщение:</p>
-  <div class="social">
-    <a href="#">Instagram</a>
-    <a href="#">Facebook</a>
-    <a href="#">TikTok</a>
-    <a href="mailto:postersprformance@gmail.com">Email</a>
-  </div>
+        <h3>Поръчка на постер</h3>
+
+        <input type="text" name="name" placeholder="Име и фамилия" required>
+        <input type="tel" name="phone" placeholder="Телефон" required>
+        <input type="email" name="email" placeholder="Имейл" required>
+        <input type="text" name="address" placeholder="Адрес за доставка" required>
+        <input type="text" name="product" placeholder="Име на постера" required>
+
+        <button type="submit">Поръчай</button>
+    </form>
 </section>
 
 <footer>
-  <p>© 2026 Posters Prformance | Всички права запазени</p>
+    © 2026 Posters Performance | All rights reserved
 </footer>
 
 </body>
 </html>
- 
-add index.html
