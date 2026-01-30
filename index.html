@@ -48,19 +48,15 @@ font-size:15px;
 
 .product button:hover{background:#ff2f7d}
 
-.cart{
-position:fixed;
-right:0;
-top:0;
-width:360px;
-height:100vh;
+/* КОЛИЧКА СЕКЦИЯ */
+.cart-section{
+max-width:900px;
+margin:60px auto;
 background:#0f0f0f;
-border-left:1px solid #222;
-padding:15px;
-overflow-y:auto
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
-
-.cart h2{text-align:center}
 
 .cart-item{
 border-bottom:1px solid #222;
@@ -115,7 +111,7 @@ margin-top:40px
 
 <nav>
 <a href="#shop">Магазин</a>
-<a href="#cart">Количка</a>
+<a href="#order">Поръчка</a>
 <a href="#contact">Контакти</a>
 </nav>
 </header>
@@ -124,6 +120,9 @@ margin-top:40px
 <h2>Онлайн магазин</h2>
 
 <div class="products">
+
+<!-- ПРОДУКТИ -->
+<!-- (всички постери) -->
 
 <!-- Poster 1 -->
 <div class="product">
@@ -215,7 +214,7 @@ margin-top:40px
 </div>
 </div>
 
-<!-- Poster 10 (НОВИЯТ) -->
+<!-- Poster 10 -->
 <div class="product">
 <img src="https://i.ibb.co/TBZ0PkQM/Chat-GPT-Image-30-01-2026-23-07-26.png">
 <div class="info">
@@ -228,13 +227,16 @@ margin-top:40px
 </div>
 </div>
 
-<div class="cart" id="cart">
-<h2>🛒 Количка</h2>
+<!-- ПОРЪЧКА ДОЛУ -->
+<div class="cart-section" id="order">
+<h2 style="text-align:center;">🛒 Твоята поръчка</h2>
+
 <div id="cartItems"></div>
+
 <div class="total">Общо: <span id="total">0</span> €</div>
 
 <div class="checkout">
-<h3>Завърши поръчката</h3>
+<h3>Данни за поръчка</h3>
 <form action="mailto:georgi_kaykov@abv.bg" method="post" enctype="text/plain">
 <input type="text" name="Име" placeholder="Име и фамилия" required>
 <input type="tel" name="Телефон" placeholder="Телефон" required>
