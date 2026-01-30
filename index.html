@@ -2,158 +2,102 @@
 <html lang="bg">
 <head>
 <meta charset="UTF-8">
+<title>Georgi Posters Performance</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posters Performance</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
 body{
+    margin:0;
+    font-family: Arial, sans-serif;
     background:#0b0b0b;
-    color:white;
+    color:#fff;
 }
 
-/* HEADER */
 header{
-    background:black;
-    padding:20px;
+    padding:25px;
     text-align:center;
-    border-bottom:2px solid #ff3c00;
+    background:#000;
+    border-bottom:1px solid #222;
 }
 
-header h1{
-    color:#ff3c00;
-    font-size:32px;
-}
+header h1{margin:0;font-size:32px;}
+header p{color:#aaa;}
 
-/* HERO */
-.hero{
-    padding:80px 20px;
-    text-align:center;
-    background:linear-gradient(120deg,#ff3c00,#300000);
-}
+section{padding:40px 20px;}
 
-.hero h2{
-    font-size:42px;
-    margin-bottom:15px;
-}
+h2{text-align:center;margin-bottom:30px;}
 
-.hero p{
-    font-size:18px;
-    opacity:0.9;
-}
-
-/* POSTERS */
-.section{
-    padding:60px 20px;
-}
-
-.section h2{
-    text-align:center;
-    color:#ff3c00;
-    font-size:32px;
-    margin-bottom:40px;
-}
-
-.posters-grid{
+.gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
     max-width:1200px;
     margin:auto;
 }
 
-.poster-card{
-    background:#111;
-    border-radius:12px;
-    padding:15px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(255,60,0,0.15);
-    transition:0.3s;
-}
-
-.poster-card:hover{
-    transform:scale(1.03);
-    box-shadow:0 0 35px rgba(255,60,0,0.35);
-}
-
-.poster-card img{
+.gallery img{
     width:100%;
     border-radius:10px;
-    margin-bottom:15px;
-}
-
-.poster-card h3{
-    margin-bottom:12px;
-}
-
-.btn{
-    display:inline-block;
-    background:#ff3c00;
-    color:white;
-    padding:10px 18px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:bold;
     transition:0.3s;
+    cursor:pointer;
 }
 
-.btn:hover{
-    background:#ff5a2a;
+.gallery img:hover{
+    transform:scale(1.04);
 }
 
-/* ORDER */
-#order{
-    background:#0f0f0f;
-    padding:60px 20px;
-}
-
-form{
-    max-width:400px;
+.order-box{
+    max-width:600px;
     margin:auto;
     background:#111;
     padding:25px;
     border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
 }
 
-form h3{
-    text-align:center;
-    color:#ff3c00;
-    margin-bottom:20px;
+.order-box input, .order-box textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:none;
+    border-radius:6px;
+    background:#1a1a1a;
+    color:white;
 }
 
-form input, form button{
+.order-box button{
     width:100%;
     padding:12px;
-    margin-bottom:10px;
-    border-radius:6px;
+    background:#e91e63;
     border:none;
-}
-
-form button{
-    background:#ff3c00;
+    border-radius:8px;
     color:white;
-    font-weight:bold;
+    font-size:16px;
     cursor:pointer;
+    transition:0.3s;
 }
 
-form button:hover{
-    background:#ff5a2a;
+.order-box button:hover{
+    background:#ff2f7d;
 }
 
-/* FOOTER */
+.socials{
+    text-align:center;
+}
+
+.socials a{
+    margin:0 12px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
 footer{
-    background:black;
     text-align:center;
     padding:20px;
-    margin-top:50px;
+    background:#000;
+    color:#777;
     font-size:14px;
-    opacity:0.7;
 }
 </style>
 </head>
@@ -161,59 +105,53 @@ footer{
 <body>
 
 <header>
-    <h1>Posters Performance</h1>
+<h1>Georgi Posters Performance</h1>
+<p>Poster Gallery & Online Orders</p>
 </header>
 
-<section class="hero">
-    <h2>Performance Posters</h2>
-    <p>Премиум постери за коли • Тунинг • Performance култура</p>
+<!-- ГАЛЕРИЯ -->
+<section>
+<h2>Постери</h2>
+<div class="gallery">
+<img src="https://i.ibb.co/8LxLj48q/Chat-GPT-Image-17-01-2026-17-20-39.png">
+<img src="https://i.ibb.co/JWpXdJ8G/Chat-GPT-Image-28-01-2026-07-37-30.png">
+<img src="https://i.ibb.co/QqxZBjv/Chat-GPT-Image-12-01-2026-00-06-57.png">
+<img src="https://i.ibb.co/DfL3GFXH/Chat-GPT-Image-8-01-2026-20-59-15.png">
+<img src="https://i.ibb.co/RkSY7vG4/Chat-GPT-Image-20-01-2026-22-05-26.png">
+</div>
 </section>
 
-<section class="section" id="posters">
-    <h2>Нашите постери</h2>
+<!-- ПОРЪЧКИ -->
+<section>
+<h2>Поръчай постер</h2>
 
-    <div class="posters-grid">
+<div class="order-box">
+<form action="mailto:yourmail@example.com" method="post" enctype="text/plain">
 
-        <div class="poster-card">
-            <img src="images/poster1.png" alt="Poster 1">
-            <h3>BMW M1000RR</h3>
-            <a href="#order" class="btn">Поръчай</a>
-        </div>
+<input type="text" name="Име" placeholder="Име и фамилия" required>
+<input type="tel" name="Телефон" placeholder="Телефон" required>
+<input type="email" name="Имейл" placeholder="Имейл" required>
+<input type="text" name="Град" placeholder="Град" required>
+<input type="text" name="Улица" placeholder="Улица и номер" required>
+<input type="text" name="Номер на продукт" placeholder="Номер на продукта" required>
 
-        <div class="poster-card">
-            <img src="images/poster2.png" alt="Poster 2">
-            <h3>Dimitrov BMW</h3>
-            <a href="#order" class="btn">Поръчай</a>
-        </div>
+<textarea name="Съобщение" placeholder="Допълнителна информация"></textarea>
 
-        <div class="poster-card">
-            <img src="images/poster3.png" alt="Poster 3">
-            <h3>RS7 Performance</h3>
-            <a href="#order" class="btn">Поръчай</a>
-        </div>
-
-    </div>
+<button type="submit">Изпрати поръчка</button>
+</form>
+</div>
 </section>
 
-<section id="order">
-    <form action="https://formsubmit.co/georgi_kaykov@abv.bg" method="POST">
-        <input type="hidden" name="_subject" value="Нова поръчка от сайта">
-        <input type="hidden" name="_captcha" value="false">
-
-        <h3>Поръчка на постер</h3>
-
-        <input type="text" name="name" placeholder="Име и фамилия" required>
-        <input type="tel" name="phone" placeholder="Телефон" required>
-        <input type="email" name="email" placeholder="Имейл" required>
-        <input type="text" name="address" placeholder="Адрес за доставка" required>
-        <input type="text" name="product" placeholder="Име на постера" required>
-
-        <button type="submit">Поръчай</button>
-    </form>
+<!-- СОЦИАЛНИ МРЕЖИ -->
+<section class="socials">
+<h2>Социални мрежи</h2>
+<a href="https://instagram.com" target="_blank">Instagram</a>
+<a href="https://facebook.com" target="_blank">Facebook</a>
+<a href="https://tiktok.com" target="_blank">TikTok</a>
 </section>
 
 <footer>
-    © 2026 Posters Performance | All rights reserved
+© 2026 Georgi Posters Performance | Всички права запазени
 </footer>
 
 </body>
