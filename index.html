@@ -126,8 +126,8 @@ margin-top:40px
 <img src="https://i.ibb.co/8LxLj48q/Chat-GPT-Image-17-01-2026-17-20-39.png">
 <div class="info">
 <h3>Poster #1</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #1',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #1',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -135,8 +135,8 @@ margin-top:40px
 <img src="https://i.ibb.co/JWpXdJ8G/Chat-GPT-Image-28-01-2026-07-37-30.png">
 <div class="info">
 <h3>Poster #2</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #2',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #2',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -144,8 +144,8 @@ margin-top:40px
 <img src="https://i.ibb.co/QqxZBjv/Chat-GPT-Image-12-01-2026-00-06-57.png">
 <div class="info">
 <h3>Poster #3</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #3',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #3',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -153,8 +153,8 @@ margin-top:40px
 <img src="https://i.ibb.co/DfL3GFXH/Chat-GPT-Image-8-01-2026-20-59-15.png">
 <div class="info">
 <h3>Poster #4</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #4',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #4',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -162,8 +162,8 @@ margin-top:40px
 <img src="https://i.ibb.co/RkSY7vG4/Chat-GPT-Image-20-01-2026-22-05-26.png">
 <div class="info">
 <h3>Poster #5</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #5',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #5',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -171,8 +171,8 @@ margin-top:40px
 <img src="https://i.ibb.co/sdt33gZL/Chat-GPT-Image-19-01-2026-23-15-56.png">
 <div class="info">
 <h3>Poster #6</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #6',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #6',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -180,8 +180,8 @@ margin-top:40px
 <img src="https://i.ibb.co/qL3HJf99/Chat-GPT-Image-29-01-2026-21-08-43.png">
 <div class="info">
 <h3>Poster #7</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #7',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #7',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -189,8 +189,8 @@ margin-top:40px
 <img src="https://i.ibb.co/ksKC9Yt6/Chat-GPT-Image-29-01-2026-21-07-42.png">
 <div class="info">
 <h3>Poster #8</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #8',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #8',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -198,8 +198,8 @@ margin-top:40px
 <img src="https://i.ibb.co/vxK7mNs1/Chat-GPT-Image-30-01-2026-22-19-28.png">
 <div class="info">
 <h3>Poster #9</h3>
-<div class="price">25 лв</div>
-<button onclick="addToCart('Poster #9',25)">Добави в количка</button>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #9',15)">Добави в количка</button>
 </div>
 </div>
 
@@ -210,7 +210,7 @@ margin-top:40px
 <div class="cart" id="cart">
 <h2>🛒 Количка</h2>
 <div id="cartItems"></div>
-<div class="total">Общо: <span id="total">0</span> лв</div>
+<div class="total">Общо: <span id="total">0</span> €</div>
 
 <div class="checkout">
 <h3>Завърши поръчката</h3>
@@ -247,13 +247,13 @@ cartItems.innerHTML = "";
 cart.forEach(item=>{
 let div = document.createElement("div");
 div.className = "cart-item";
-div.innerText = item.name + " - " + item.price + " лв";
+div.innerText = item.name + " - " + item.price + " €";
 cartItems.appendChild(div);
 });
 document.getElementById("total").innerText = total;
 
-let orderText = cart.map(item => item.name + " - " + item.price + "лв").join(", ");
-document.getElementById("orderData").value = orderText + " | Общо: " + total + " лв";
+let orderText = cart.map(item => item.name + " - " + item.price + "€").join(", ");
+document.getElementById("orderData").value = orderText + " | Общо: " + total + " €";
 }
 </script>
 
