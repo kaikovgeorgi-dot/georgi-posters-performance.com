@@ -16,7 +16,7 @@ nav a{color:#fff;margin:0 15px;text-decoration:none}
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px
 }
 
@@ -45,7 +45,6 @@ color:white;
 cursor:pointer;
 font-size:15px;
 }
-
 .product button:hover{background:#ff2f7d}
 
 .cart-section{
@@ -57,17 +56,8 @@ border-radius:15px;
 box-shadow:0 0 25px rgba(0,0,0,0.7);
 }
 
-.cart-item{
-border-bottom:1px solid #222;
-padding:8px 0;
-font-size:14px
-}
-
-.total{
-text-align:center;
-font-size:18px;
-margin:15px 0
-}
+.cart-item{border-bottom:1px solid #222;padding:8px 0}
+.total{text-align:center;font-size:18px;margin:15px 0}
 
 .checkout input,.checkout textarea{
 width:100%;
@@ -118,32 +108,29 @@ margin-top:40px
 
 <div class="products">
 
-<!-- СТАРИ ПОСТЕРИ 1–10 (остават същите) -->
-
-<div class="product">
-<img src="https://i.ibb.co/LXFzYH57/Chat-GPT-Image-31-01-2026-00-12-23.png">
-<div class="info">
-<h3>Poster #11</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #11',15)">Добави в количка</button>
-</div>
-</div>
-
-<div class="product">
-<img src="https://i.ibb.co/nMRxyxcp/528cf65c-f981-41e8-9c58-8ca2f81d9cbd-md.jpg">
-<div class="info">
-<h3>Poster #12</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #12',15)">Добави в количка</button>
-</div>
-</div>
+<!-- POSTER 1–12 (ВСИЧКИ) -->
+<script>
+const posters = [
+"https://i.ibb.co/8LxLj48q/Chat-GPT-Image-17-01-2026-17-20-39.png",
+"https://i.ibb.co/JWpXdJ8G/Chat-GPT-Image-28-01-2026-07-37-30.png",
+"https://i.ibb.co/QqxZBjv/Chat-GPT-Image-12-01-2026-00-06-57.png",
+"https://i.ibb.co/DfL3GFXH/Chat-GPT-Image-8-01-2026-20-59-15.png",
+"https://i.ibb.co/RkSY7vG4/Chat-GPT-Image-20-01-2026-22-05-26.png",
+"https://i.ibb.co/sdt33gZL/Chat-GPT-Image-19-01-2026-23-15-56.png",
+"https://i.ibb.co/qL3HJf99/Chat-GPT-Image-29-01-2026-21-08-43.png",
+"https://i.ibb.co/ksKC9Yt6/Chat-GPT-Image-29-01-2026-21-07-42.png",
+"https://i.ibb.co/vxK7mNs1/Chat-GPT-Image-30-01-2026-22-19-28.png",
+"https://i.ibb.co/TBZ0PkQM/Chat-GPT-Image-30-01-2026-23-07-26.png",
+"https://i.ibb.co/LXFzYH57/Chat-GPT-Image-31-01-2026-00-12-23.png",
+"https://i.ibb.co/nMRxyxcp/528cf65c-f981-41e8-9c58-8ca2f81d9cbd-md.jpg"
+];
+</script>
 
 </div>
 </div>
 
 <div class="cart-section" id="order">
 <h2 style="text-align:center;">🛒 Твоята поръчка</h2>
-
 <div id="cartItems"></div>
 <div class="total">Общо: <span id="total">0</span> €</div>
 
@@ -154,7 +141,7 @@ margin-top:40px
 <input type="email" name="Имейл" placeholder="Имейл" required>
 <input type="text" name="Град" placeholder="Град" required>
 <input type="text" name="Адрес" placeholder="Улица и номер" required>
-<textarea name="Поръчка" id="orderData" placeholder="Поръчка"></textarea>
+<textarea name="Поръчка" id="orderData"></textarea>
 <button type="submit">Финализирай поръчката</button>
 </form>
 </div>
@@ -162,12 +149,23 @@ margin-top:40px
 
 <footer id="contact">
 <p>© 2026 Georgi Posters Store</p>
-<p>Instagram | Facebook | TikTok</p>
 </footer>
 
 <script>
-let cart=[];
-let total=0;
+let cart=[], total=0;
+const container=document.querySelector(".products");
+
+posters.forEach((src,i)=>{
+container.innerHTML+=`
+<div class="product">
+<img src="${src}">
+<div class="info">
+<h3>Poster #${i+1}</h3>
+<div class="price">15 €</div>
+<button onclick="addToCart('Poster #${i+1}',15)">Добави в количка</button>
+</div>
+</div>`;
+});
 
 function addToCart(name,price){
 cart.push({name,price});
@@ -176,17 +174,14 @@ renderCart();
 }
 
 function renderCart(){
-let cartItems=document.getElementById("cartItems");
+const cartItems=document.getElementById("cartItems");
 cartItems.innerHTML="";
-cart.forEach(item=>{
-let div=document.createElement("div");
-div.className="cart-item";
-div.innerText=item.name+" - "+item.price+" €";
-cartItems.appendChild(div);
+cart.forEach(i=>{
+cartItems.innerHTML+=`<div class="cart-item">${i.name} - ${i.price} €</div>`;
 });
 document.getElementById("total").innerText=total;
 document.getElementById("orderData").value=
-cart.map(i=>i.name+" - "+i.price+"€").join(", ")+" | Общо: "+total+" €";
+cart.map(i=>`${i.name} - ${i.price}€`).join(", ")+" | Общо: "+total+" €";
 }
 </script>
 
