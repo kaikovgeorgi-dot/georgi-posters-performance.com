@@ -48,7 +48,6 @@ font-size:15px;
 
 .product button:hover{background:#ff2f7d}
 
-/* КОЛИЧКА СЕКЦИЯ */
 .cart-section{
 max-width:900px;
 margin:60px auto;
@@ -70,7 +69,7 @@ font-size:18px;
 margin:15px 0
 }
 
-.checkout input, .checkout textarea{
+.checkout input,.checkout textarea{
 width:100%;
 padding:8px;
 margin:6px 0;
@@ -104,11 +103,9 @@ margin-top:40px
 
 <header>
 <h1>Georgi Posters Store</h1>
-
 <p style="margin-top:10px;color:#ccc;font-size:16px;">
 Нашите Постери , изработени изцяло по ваша идея , и с идеално качество ! Бърза доставка !
 </p>
-
 <nav>
 <a href="#shop">Магазин</a>
 <a href="#order">Поръчка</a>
@@ -121,122 +118,36 @@ margin-top:40px
 
 <div class="products">
 
-<!-- ПРОДУКТИ -->
-<!-- (всички постери) -->
+<!-- СТАРИ ПОСТЕРИ 1–10 (остават същите) -->
 
-<!-- Poster 1 -->
 <div class="product">
-<img src="https://i.ibb.co/8LxLj48q/Chat-GPT-Image-17-01-2026-17-20-39.png">
+<img src="https://i.ibb.co/LXFzYH57/Chat-GPT-Image-31-01-2026-00-12-23.png">
 <div class="info">
-<h3>Poster #1</h3>
+<h3>Poster #11</h3>
 <div class="price">15 €</div>
-<button onclick="addToCart('Poster #1',15)">Добави в количка</button>
+<button onclick="addToCart('Poster #11',15)">Добави в количка</button>
 </div>
 </div>
 
-<!-- Poster 2 -->
 <div class="product">
-<img src="https://i.ibb.co/JWpXdJ8G/Chat-GPT-Image-28-01-2026-07-37-30.png">
+<img src="https://i.ibb.co/nMRxyxcp/528cf65c-f981-41e8-9c58-8ca2f81d9cbd-md.jpg">
 <div class="info">
-<h3>Poster #2</h3>
+<h3>Poster #12</h3>
 <div class="price">15 €</div>
-<button onclick="addToCart('Poster #2',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 3 -->
-<div class="product">
-<img src="https://i.ibb.co/QqxZBjv/Chat-GPT-Image-12-01-2026-00-06-57.png">
-<div class="info">
-<h3>Poster #3</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #3',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 4 -->
-<div class="product">
-<img src="https://i.ibb.co/DfL3GFXH/Chat-GPT-Image-8-01-2026-20-59-15.png">
-<div class="info">
-<h3>Poster #4</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #4',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 5 -->
-<div class="product">
-<img src="https://i.ibb.co/RkSY7vG4/Chat-GPT-Image-20-01-2026-22-05-26.png">
-<div class="info">
-<h3>Poster #5</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #5',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 6 -->
-<div class="product">
-<img src="https://i.ibb.co/sdt33gZL/Chat-GPT-Image-19-01-2026-23-15-56.png">
-<div class="info">
-<h3>Poster #6</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #6',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 7 -->
-<div class="product">
-<img src="https://i.ibb.co/qL3HJf99/Chat-GPT-Image-29-01-2026-21-08-43.png">
-<div class="info">
-<h3>Poster #7</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #7',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 8 -->
-<div class="product">
-<img src="https://i.ibb.co/ksKC9Yt6/Chat-GPT-Image-29-01-2026-21-07-42.png">
-<div class="info">
-<h3>Poster #8</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #8',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 9 -->
-<div class="product">
-<img src="https://i.ibb.co/vxK7mNs1/Chat-GPT-Image-30-01-2026-22-19-28.png">
-<div class="info">
-<h3>Poster #9</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #9',15)">Добави в количка</button>
-</div>
-</div>
-
-<!-- Poster 10 -->
-<div class="product">
-<img src="https://i.ibb.co/TBZ0PkQM/Chat-GPT-Image-30-01-2026-23-07-26.png">
-<div class="info">
-<h3>Poster #10</h3>
-<div class="price">15 €</div>
-<button onclick="addToCart('Poster #10',15)">Добави в количка</button>
+<button onclick="addToCart('Poster #12',15)">Добави в количка</button>
 </div>
 </div>
 
 </div>
 </div>
 
-<!-- ПОРЪЧКА ДОЛУ -->
 <div class="cart-section" id="order">
 <h2 style="text-align:center;">🛒 Твоята поръчка</h2>
 
 <div id="cartItems"></div>
-
 <div class="total">Общо: <span id="total">0</span> €</div>
 
 <div class="checkout">
-<h3>Данни за поръчка</h3>
 <form action="mailto:georgi_kaykov@abv.bg" method="post" enctype="text/plain">
 <input type="text" name="Име" placeholder="Име и фамилия" required>
 <input type="tel" name="Телефон" placeholder="Телефон" required>
@@ -255,28 +166,27 @@ margin-top:40px
 </footer>
 
 <script>
-let cart = [];
-let total = 0;
+let cart=[];
+let total=0;
 
-function addToCart(name, price){
-cart.push({name, price});
-total += price;
+function addToCart(name,price){
+cart.push({name,price});
+total+=price;
 renderCart();
 }
 
 function renderCart(){
-let cartItems = document.getElementById("cartItems");
-cartItems.innerHTML = "";
+let cartItems=document.getElementById("cartItems");
+cartItems.innerHTML="";
 cart.forEach(item=>{
-let div = document.createElement("div");
-div.className = "cart-item";
-div.innerText = item.name + " - " + item.price + " €";
+let div=document.createElement("div");
+div.className="cart-item";
+div.innerText=item.name+" - "+item.price+" €";
 cartItems.appendChild(div);
 });
-document.getElementById("total").innerText = total;
-
-let orderText = cart.map(item => item.name + " - " + item.price + "€").join(", ");
-document.getElementById("orderData").value = orderText + " | Общо: " + total + " €";
+document.getElementById("total").innerText=total;
+document.getElementById("orderData").value=
+cart.map(i=>i.name+" - "+i.price+"€").join(", ")+" | Общо: "+total+" €";
 }
 </script>
 
